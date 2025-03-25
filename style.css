@@ -1,0 +1,1027 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.home
+{
+    width: 100%;
+    height: 100vh;
+/*     border: solid; */
+    position: relative;
+    background-image: url('Assert/bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.spark {
+    position: absolute;
+    width: 3px; /* Smaller sparks */
+    height: 3px; /* Smaller sparks */
+    border-radius: 50%;
+    pointer-events: none; /* Prevents interference with mouse events */
+    animation: sparkFade 0.8s ease-out forwards; /* Smoother fade-out */
+    z-index: 1000; /* Ensure sparks are on top */
+}
+
+@keyframes sparkFade {
+    to {
+        opacity: 0;
+        transform: translate(var(--dx), var(--dy));
+    }
+}
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+header
+{
+    /* border: solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+height: 70px;
+padding: 0 5%;
+width: 100%;
+transition: background-color 0.3s ease;
+z-index: 100;
+position: fixed;
+}
+header.scrolled {
+    background-color: rgba(26, 25, 25, 0.816); /*you can Change to any color on scroll */
+}
+header.scrolled nav a {
+    color: white; 
+    background-color:    rgba(0, 0, 0, 0.5);
+}
+header scrolled nav a.avt
+{
+    background-color: rgb(0, 255, 255);
+     
+}
+header h1{
+    font-size: xxx-large;
+    font-weight: 600 ;
+   color: rgb(0, 255, 255);
+   font-family: "Dancing Script", cursive;
+   
+}
+header nav 
+{
+    /* border: solid; */
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.logo.clicked {
+    animation: vibrate 0.3s ease-in-out;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(-2px); }
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+header nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 99px;
+    transition: 0.5s;
+    color:white;
+
+}
+header nav a.avt{
+background-color: rgb(0, 213, 255);
+color: black;
+}
+header nav a:hover{
+    background-color:rgb(0, 255, 255);  
+    color: black;
+    box-shadow: 0 0 1rem rgb(0, 255, 255);
+}
+header nav:hover > a:not(:hover){
+background: none;
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+
+}
+header .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    
+}
+/* Title Styling */
+.title {
+    font-family: "Playfair Display", cursive;
+    font-size: 70px;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Prevents word wrapping */
+}
+
+.title span {
+    background-image: linear-gradient(90deg, #6a11cb, #2575fc, #29abe2, #4ecdc4, #bbf7d0, #ffecb3, #ffc107, #ff9800); /* Refined gradient */
+    background-size: 300% 100%; /* Adjust for smoother animation */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: subtleGradientShift 8s infinite linear; /* Slower and more refined animation */
+    display: inline-block; /* Important for animation and spacing */
+  }
+  
+  /* More controlled delays */
+  .title span:nth-child(1) { animation-delay: 0s; }
+  .title span:nth-child(2) { animation-delay: 0.5s; }
+  .title span:nth-child(3) { animation-delay: 1s; }
+  .title span:nth-child(4) { animation-delay: 1.5s; }
+  .title span:nth-child(5) { animation-delay: 2s; }
+  .title span:nth-child(6) { animation-delay: 2.5s; }
+  .title span:nth-child(7) { animation-delay: 3s; }
+  .title span:nth-child(8) { animation-delay: 3.5s; }
+  
+  /* Refined Gradient Animation */
+  @keyframes subtleGradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+.tag{
+    position: absolute;
+    /* border: solid; */
+    top: 65%;
+    left: 50%;
+    font-size: 30px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%,-50%);
+    color:white; 
+    white-space: nowrap;
+}
+
+.products {
+    margin-top: 50px; /* Adjust this value as needed */
+    text-align: center;
+}
+.products h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.services {
+    margin-top: 50px; /* Adjust this value as needed */
+    text-align: center;
+}
+.services h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.imgs_container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.imgs_container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    gap: 16px; /* Spacing between items */
+    justify-content: space-between; /* Align items with spacing between them */
+    padding: 16px;
+}
+
+.image-container {
+    position: relative;
+    width: calc(50% - 16px); /* Two items per row (subtract gap for spacing) */
+    height: 400px; /* Fixed height for containers */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%; /* Ensure image fits the container */
+    height: 100%; /* Ensure image fills the container */
+    object-fit: cover; /* Prevent distortion */
+    border-radius: 8px;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure text is above the image */
+}
+
+/* Responsive Image Sizes */
+@media (max-width: 767px) {
+    .image-container {
+        width: 90%; /* Adjust for smaller screens */
+        height: auto;
+    }
+}
+
+/* about --------------------------------------*/
+
+.About {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    gap: 10px;
+    min-height: 50vh; /* Ensures it takes full height of the screen */
+    text-align: left;
+   
+}
+
+
+.p1, .p2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures equal vertical alignment */
+}
+
+/* Image Styling */
+
+/* Image Styling */
+.p1 img {
+    width: 5000px; /* Make it larger */
+    height: auto;
+    animation: tilt 3s infinite alternate ease-in-out;
+}
+
+
+
+/* Tilt Animation */
+@keyframes tilt {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+
+.p2
+{
+    width: 50%;
+    height: auto;
+    /* border: yellow solid;  */
+  
+}
+.p2 h1{
+   font-size: 40px;
+   padding-left: 3%;
+   padding-top: 20%;
+   white-space: nowrap;
+   font-weight: 500;
+
+}
+.underline
+{
+    border-bottom: 5px solid rgb(0, 0, 255); /* Adds a green underline */
+    display: inline-block; /* Keeps underline only under the text */
+    padding-bottom: 3px; 
+}
+ .p2 p
+{ 
+    padding-left: 3%;
+    padding-top: 2%;
+    margin-right: 5%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.p2 h2{
+    font-size: 25px;
+   padding-left: 3%;
+   padding-top: 2%;
+   font-weight: 500;
+}
+.ab{
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+}
+.ab h1{
+    border-bottom: 4px solid rgb(0, 255, 255); /* Adds a green underline */
+    display: inline-block; /* Keeps underline only under the text */
+    padding-bottom: 1px; 
+    color:white;
+    margin-left: 45%;
+    margin-top: 7%;
+    font-size: 50px;
+    font-weight: 400;
+    text-shadow: 5px 5px 10px rgba(33, 169, 33, 0.94);
+   
+}
+.ab p{
+    margin-left: 32%; 
+    margin-top: 1%;
+    font-size: 35px;
+    white-space: nowrap;
+    font-weight: 300;
+    color:black;
+   
+
+}
+
+
+
+
+.centered-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    text-align: center;
+    align-content: center;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .centered-text {
+    opacity: 1;
+}
+.hidden {
+    display: none; /* Hide elements with this class */
+  }
+
+  .chef {
+    width: 100%;
+    height: auto;
+    background-image: url("Assert/coding.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.chefclr {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
+    animation: glow 1.5s infinite alternate, bounceIn 1s ease-out;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(62, 62, 62), 0 0 20px rgb(0, 0, 0);
+    }
+    to {
+        text-shadow: 0 0 20px rgb(45, 45, 45), 0 0 40px rgb(0, 0, 0);
+    }
+}
+
+/* Bounce-In Effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.chef h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Chef Cards */
+.chef_detail {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card Wrapper */
+.chef_card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px; /* Enables 3D Effect */
+    cursor: pointer;
+}
+
+/* Inner Card (Flippable Part) */
+.card_inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flip Effect Applied */
+.chef_card.flipped .card_inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Styling */
+.card_front, .card_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Front Side */
+.card_front {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.card_front img {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card_front h2, .card_back h3 {
+    color: rgb(0, 217, 255); /* Main text color */
+    font-size: 25px;
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgb(0, 34, 255), 
+                 -2px -2px 5px rgba(255, 255, 255, 0.4); /* Dark & Light Shadow */
+}
+
+.card_front h4, .card_back h4 {
+    color: rgb(255, 179, 0); /* Main text color */
+    font-size: 18px;
+    margin-top: 5px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0), 
+                 -2px -2px 5px rgba(255, 255, 255, 0.4); /* Dark & Light Shadow */
+}
+
+
+/* Back Side */
+.card_back {
+    background: rgba(0, 0, 0, 0.8);
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.card_back p {
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.floating-whatsapp a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hide text on mobile, show on laptop */
+.floating-whatsapp span {
+    display: inline; /* Default: Show on larger screens */
+}
+
+/* Mobile view: Hide text */
+@media (max-width: 768px) {
+    .floating-whatsapp {
+        padding: 12px;
+    }
+    
+    .floating-whatsapp span {
+        display: none; /* Hide text on mobile */
+    }
+    
+}
+
+/* Hover Effect */
+.floating-whatsapp:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    
+    .chef_detail {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Add space between cards */
+    }
+
+    .chef_card {
+        width: 80%;
+        margin-bottom: 20px; /* Ensure spacing below each card */
+    }
+
+
+    .imgs_container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 16px; /* Add spacing between rows */
+        padding: 20px; /* Optional: Adds padding to the container */
+    }
+    
+    .image-container {
+        position: relative;
+        width: 500px; /* Base width */
+        height: 300px; /* Base height */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .image-container img {
+        width: 100%; /* Ensure the image fits the container's width */
+        height: 100%; /* Ensure the image fits the container's height */
+        object-fit: cover; /* Crop or fit image without distortion */
+        border-radius: 8px;
+    }
+    
+ 
+    
+    
+}
+
+
+.reservation
+{
+   
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(0, 255, 255);
+}
+.reservation h3{
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+    font-size: 40px;
+    font-weight: 400    ;
+}
+footer
+{
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.827);
+display: flex;
+text-align: center;
+justify-content: center;
+gap:120px;
+color: white;
+padding-left: 18px;
+padding-top: 6%;
+
+}
+
+footer .copyright {
+    margin-top: 20px; /* Add space above the copyright section */
+    font-size: 14px;
+    color: #cdcccc; /* Softer color for copyright text */
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer Divs */
+footer div {
+    margin: 10px;
+}
+
+/* Headings */
+h3 {
+    color: #f8b400;
+}
+
+/* Hover Effect */
+footer:hover {
+    padding: 30px;
+    background: #333;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width: 768px)
+{
+    .p1 img {
+        border: 1px solid rgb(0, 255, 255);
+
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 200%;
+     
+    } 
+    
+}
+/* mobile device */
+
+
+@media (max-width: 768px)
+{
+    
+    .section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .section.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    
+    header h1{
+        font-size: xxx-large;
+        font-weight: 400 ;
+    }
+    header nav a{
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+    
+    }
+    /* hemburger */
+    header nav {
+        display: none;
+        flex-direction: column;
+        /* background-color: #333; */
+        position: absolute;
+        top: 45px;
+     width: 30%;
+        right: 0;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    header .hamburger {
+        display: block;
+    }
+
+    header nav.show {
+        display: flex;
+    }
+
+    header nav a {
+        /* last update */
+        margin-top: 18px; 
+        /* add in github */
+        padding: 5px;
+        text-align: center;
+        border-bottom: 0.5px solid #444;
+    }
+    /*  */
+    .title{
+   
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        font-weight: 900;
+        white-space: nowrap;
+    }
+    .tag{
+        top: 60%;
+        left: 50%;
+        font-size: 20px;
+       
+    }
+    /* about --------------------------------------*/
+
+    .About {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    .p1 img {
+        border: 2px solid rgb(0, 255, 255);
+        width: 1000px; /* Make image responsive */
+    
+        max-width: 250px; /* Limit maximum size */
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+.p2
+{
+    width: 100%;
+    height: auto;
+    /* border: yellow solid;  */
+  
+}
+.p2 h1{
+   
+   padding-left: 9%;
+   padding-top: 2%;
+   font-weight: 500;
+
+}
+.underline
+{
+    border-bottom: 5px solid rgb(0, 0, 255); /* Adds a green underline */
+    display: inline-block; /* Keeps underline only under the text */
+    padding-bottom: 3px; 
+}
+ .p2 p
+{ 
+    padding-left: 9%;
+    padding-top: 2%;
+    margin-right: 5%;
+}
+
+.p2 h2{
+    font-size: 25px;
+   padding-left: 9%;
+   padding-top: 2%;
+   font-weight: 500;
+}
+.ab{ 
+    height: 200px;
+    padding-top: 28px;
+}
+.ab h1{
+   font-size: 30px;
+    font-weight: 400;
+}
+.ab p{
+    margin-left: 10%; 
+    margin-top: 2%;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+
+ 
+
+/* galary photos */
+.image-container {
+    width: 45%;  /* Two items per row on tablets */
+}
+.centered-text {
+    font-size: 1em;
+}
+.image-container:hover .centered-text {
+    opacity: 1;
+}
+/* chef page */
+.chef_detail
+{
+
+flex-direction: column;
+}
+.chef{
+    padding-top: 30px;
+}
+.chef_detail
+{
+gap: 0px
+}
+.riyaz
+{
+    width: 60%;
+    height: 90vh;
+}
+.reservation h3{
+   
+    padding-top: 13%;
+    font-size: 28px;
+}
+footer
+{
+flex-direction: column;
+height: auto;
+gap: 20px;
+padding-bottom: 50px;
+}
+
+}
+@media (max-width: 430px) {
+/*     body {
+        border: 5px solid green;
+    } */
+
+    
+
+    header h1 {
+        font-size: xx-large;
+        font-weight: 400;
+    }
+
+    header nav a {
+        font-size: 13px;
+        font-weight: 500;
+        padding: 3px;
+    }
+
+    header nav:nth-child {
+        width: 30%; /* Adjusts width of the nav menu to be more compact */
+        top: 45px;
+        padding: 4px;
+    }
+    
+
+    .title {
+        top: 50%;
+        left: 50%;
+        font-size: 35px;
+        font-weight: 800;
+        white-space: nowrap;
+       
+    }
+
+    .tag {
+        top: 61%;
+        left: 50%;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    header .hamburger {
+        font-size: 20px;
+
+    }
+    /* about --------------------------------------*/
+
+    .About {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    .p1 img {
+        width: 80%; /* Make image responsive */
+        max-width: 250px; /* Limit maximum size */
+    }
+.p2
+{
+    width: 100%;
+    height: auto;
+    /* border: yellow solid;  */  
+}
+.p2 h1{  
+  font-size: 30px;
+}
+.ab h1{
+   font-size: 35px;
+    
+    margin-left: 35%; 
+}
+.ab p{
+    margin-left: 3%; 
+    font-size: 20px;
+}
+
+/* galary section */
+
+.image-button
+{
+    justify-content: left;
+    gap: 6px;                
+    margin: 20px;
+   
+}
+/* galary photo */
+.image-container {
+    width: 90%;
+    margin-left: 10px;
+}
+.chef h1{
+    font-size: 40px;
+}
+.chef_detail h4{
+    font-size: 20px;
+    }
+
+.john, .michael, .gordan
+{
+    width: 60%;
+    height: 50vh;
+}
+.reservation
+{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(0, 255, 255);
+}
+.reservation h3{
+    padding-top: 13%;
+    font-size: 1.5rem;   
+}
+
+
+}
