@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/riyazclock/websiteesb/refs/heads/main/Assert/apexlogo.png" type="image/png">
     <title>Tech Apex</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,11 +20,22 @@
             </nav>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
         </header>        
+         <canvas id="dotsCanvas"></canvas>
         <h1 class="title">
             <span>T</span><span>e</span><span>c</span><span>h</span>
             <span>A</span><span>p</span><span>e</span><span>x</span>
         </h1>
-        <h4 class="tag">Advancing Businesses with Technology</h4>
+         
+   <div class="tag-wrapper">
+  <h4 class="tag fixed">Advancing Businesses with Technology</h4>
+  <h4 class="tag dynamic"><span id="dynamic-text">to Grow</span></h4>
+  </div>
+</div>
+
+ 
+</h4>
+
+    </h4>
     </div>
 
     <div class="About" id="about">
@@ -34,7 +46,7 @@
         <div class="About section" id="about">
         <div class="p2">
             <h1><span class="underline">ABOUT</span> US</h1>
-            <p>At TechApex, we are proud to have a team of highly experienced engineers dedicated to delivering exceptional technology solutions. Our expertise spans Web development, App development, Designing Services, E-Commerce solutions, and Tech Consultancy. We leverage cutting-edge technology to create tailored solutions that meet your unique business needs. Whether you are looking to build a robust online presence, streamline your operations, or enhance user experience, our professionals are committed to excellence and innovation. Partner with us to transform your vision into reality with reliable, scalable, and impactful technology services. Your success is our priority.</p>
+            <p>At TechApex, we are proud to have a team of highly experienced engineers dedicated to delivering exceptional technology solutions. Our expertise spans Web development, App development, Designing Services, E-Commerce solutions, Digital Markrting, Performance Marketing and Tech Consultancy. We leverage cutting-edge technology to create tailored solutions that meet your unique business needs. Whether you are looking to build a robust online presence, streamline your operations, or enhance user experience, our professionals are committed to excellence and innovation. Partner with us to transform your vision into reality with reliable, scalable, and impactful technology services. Your success is our priority.</p>
         </div>
         </div>
     </div>
@@ -46,83 +58,64 @@
     </div>
 <div class="imgs_container">
     <!-- Web Development -->
-    <div class="image-container software">
+   <div class="image-container security">
         <picture>
-            <source srcset="Assert/Top-Website-webapp-development-company.png" media="(min-width: 1200px)">
-            <source srcset="Assert/top-web-development-company.png" media="(min-width: 768px)">
-            <img src="Assert/top-web-development-company.png" alt="Web Development">
+            <source srcset="Assert/webdesigndevlopment.png" media="(min-width: 1200px)">
+            <source srcset="Assert/techapexwebappdevelopment.png" media="(min-width: 768px)">
+            <img src="Assert/techapexwebappdevelopment.png" alt="Web Design & Development">
         </picture>
-        <div class="centered-text">Web Development</div>
+        <div class="centered-text">Web Design & Development</div>
     </div>
 
     <!-- App Development -->
     <div class="image-container hardware">
         <picture>
-            <source srcset="Assert/Best-Mobile-App-Development-Company.png" media="(min-width: 1200px)">
-            <source srcset="Assert/mobile-app-development-company.png" media="(min-width: 768px)">
-            <img src="Assert/mobile-app-development-company.png" alt="App Development">
+            <source srcset="Assert/MobileAppDevelopment.png" media="(min-width: 1200px)">
+            <source srcset="Assert/techApexMobileappdevelopment.png" media="(min-width: 768px)">
+            <img src="Assert/techApexMobileappdevelopment.png" alt="App Development">
         </picture>
-        <div class="centered-text">App Development</div>
+        <div class="centered-text">Mobile App Development</div>
     </div>
 
   <!-- E-commerce Solution -->
-    <div class="image-container security">
+    <div class="image-container software">
         <picture>
-            <source srcset="Assert/Top-10-Ecommerce-Company.png" media="(min-width: 1200px)">
-            <source srcset="Assert/best-and-affordable-ecommerce-app-development-company.png" media="(min-width: 768px)">
-            <img src="Assert/best-and-affordable-ecommerce-app-development-company.png" alt="E-commerce Solution">
+            <source srcset="Assert/EcommerceSolutions.png" media="(min-width: 1200px)">
+            <source srcset="Assert/techapexecommercesolution.png" media="(min-width: 768px)">
+            <img src="Assert/techapexecommercesolution.png" alt="E-commerce Solution">
         </picture>
         <div class="centered-text">E-commerce Solution</div>
     </div>
+    
 
-   <!-- UiUx-->
-    <div class="image-container security">
-        <picture>
-            <source srcset="Assert/Best-UiUx-design-company.png" media="(min-width: 1200px)">
-            <source srcset="Assert/best-uiux-design-company-in-india.png" media="(min-width: 768px)">
-            <img src="Assert/best-uiux-design-company-in-india.png" alt="Tech Consultancy">
-        </picture>
-        <div class="centered-text">Ui/Ux Design</div>
-    </div>
-
-        <!-- Tech Consultancy -->
-    <div class="image-container security">
-        <picture>
-            <source srcset="Assert/Top-10-Tech-Consultancy.png" media="(min-width: 1200px)">
-            <source srcset="Assert/good-tech-consultancy.png" media="(min-width: 768px)">
-            <img src="Assert/good-tech-consultancy.png" alt="Tech Consultancy">
-        </picture>
-        <div class="centered-text">Tech Consultancy</div>
-    </div>
-
-        <!-- Software Development -->
-    <div class="image-container security">
-        <picture>
-            <source srcset="Assert/Top-software-development-company.png" media="(min-width: 1200px)">
-            <source srcset="Assert/top-software-development-company-in-india.png" media="(min-width: 768px)">
-            <img src="Assert/top-software-development-company-in-india.png" alt="Tech Consultancy">
-        </picture>
-        <div class="centered-text">Software Development</div>
-    </div>
-
-            <!-- QA -->
-    <div class="image-container security">
-        <picture>
-            <source srcset="Assert/QA_Company_Quality_Assurance.png" media="(min-width: 1200px)">
-            <source srcset="Assert/top_QA_Company.png" media="(min-width: 768px)">
-            <img src="Assert/top_QA_Company.png" alt="QA">
-        </picture>
-        <div class="centered-text">QA</div>
-    </div>
 
     <!-- Designing Services -->
     <div class="image-container security">
         <picture>
-            <source srcset="Assert/Best-logo-design-company-in-chennai.png" media="(min-width: 1200px)">
-            <source srcset="Assert/best-graphics-designer.png" media="(min-width: 768px)">
-            <img src="Assert/best-graphics-designer.png" alt="Designing Services">
+            <source srcset="Assert/performance_marketing.png" media="(min-width: 1200px)">
+            <source srcset="Assert/techapexperformancemarkrting.png" media="(min-width: 768px)">
+            <img src="Assert/techapexperformancemarkrting.png" alt="Branding and Performance Marketing">
         </picture>
-        <div class="centered-text">Graphic Designing</div>
+        <div class="centered-text">Branding and Performance Marketing</div>
+    </div>
+
+    <div class="image-container software">
+        <picture>
+            <source srcset="Assert/customsoft.png" media="(min-width: 1200px)">
+            <source srcset="Assert/custom_software.png" media="(min-width: 768px)">
+            <img src="Assert/custom_software.png" alt="Custom Software Development">
+        </picture>
+        <div class="centered-text">Custom Software Development</div>
+    </div>
+    
+
+    <div class="image-container security">
+        <picture>
+            <source srcset="Assert/QAbig.png" media="(min-width: 1200px)">
+            <source srcset="Assert/qualityassurance.png" media="(min-width: 768px)">
+            <img src="Assert/qualityassurance.png" alt="Quality Assurance">
+        </picture>
+        <div class="centered-text">Quality Assurance</div>
     </div>
 
 </div>
@@ -139,8 +132,8 @@
     <a href="https://play.google.com/store/apps/details?id=com.apexenterprises.easemybusiness" target="_blank">
         <picture>
             <source srcset="Assert/top-mobile-billing-app.png" media="(min-width: 1200px)">
-            <source srcset="Assert/best-mobile-billing-app.png" media="(min-width: 768px)">
-            <img src="Assert/best-mobile-billing-app.png" alt="EaseMyBusiness">
+            <source srcset="Assert/smallbillora.png" media="(min-width: 768px)">
+            <img src="Assert/smallbillora.png" alt="Billora">
         </picture>
         <div class="centered-text">Billora</div>
     </a>
@@ -150,12 +143,23 @@
     <a href="https://play.google.com/store/apps/details?id=com.apexenterprises.payjicalc" target="_blank">
         <picture>
             <source srcset="Assert/top-mobile-upi-calculator.png" media="(min-width: 1200px)">
-            <source srcset="Assert/best-upi-calculator.png" media="(min-width: 768px)">
-            <img src="Assert/best-upi-calculator.png" alt="QTS">
+            <source srcset="Assert/smallpayjiclac.png" media="(min-width: 768px)">
+            <img src="Assert/smallpayjiclac.png" alt="PayjiCalc">
         </picture>
         <div class="centered-text">PayjiCalc</div>
     </a>
 </div>
+
+<div class="image-container software">
+        <picture>
+            <source srcset="Assert/furnepicbif.png" media="(min-width: 1200px)">
+            <source srcset="Assert/furnepicsmall.png" media="(min-width: 768px)">
+            <img src="Assert/furnepicsmall.png" alt="furnepic.com">
+        </picture>
+        <div class="centered-text">furnepic.com</div>
+    </a>
+</div>
+
 
     
 </div>
@@ -173,7 +177,7 @@
                     <div class="card_back">
                         <h3>Mohamed Riyaz M A</h3>
                         <h4>Founder & Lead Engineer</h4> <!-- Position here too -->
-                        <p>Riyaz is the sole developer of Billora, a flagship mobile app designed for business. He has extensive experience in application development.</p>
+                        <p>Riyaz possesses expertise in developing business applications and leveraging technology to automate processes and drive revenue growth.</p>
                     </div>
                 </div>
             </div>
@@ -190,7 +194,6 @@
             <span> Connect with us</span>
         </a>
     </div>
-    
 
     
     <footer>
