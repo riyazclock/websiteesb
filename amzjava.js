@@ -175,7 +175,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Replace with your Google Apps Script Web App URL
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyIBXP_Dpm1uduPMooeMeCWNCul19wV_K4iDB2ED5ZCmKSZyRdxtkEbCz8EQJAHeSeAig/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxVmLj-dlcPy2at79cDXAl_rqvjR2NKq_MHAdM232a_LGMJu_87Qk76FyRGKxGUY4HsWQ/exec';
         
         // Send data to Google Sheets
         const response = await fetch(SCRIPT_URL, {
@@ -300,4 +300,5 @@ form.addEventListener('keypress', function(e) {
             inputs[index + 1].focus();
         }
     }
+
 });
