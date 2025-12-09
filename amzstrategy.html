@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Your Amazon Business | Free Masterclass</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f59e0b;
+            display: block;
+        }
+
+        .trust-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        .video-section {
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-label {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .booking-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .booking-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .booking-description {
+            font-size: 1.2rem;
+            color: #e0e7ff;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .calendly-container {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            min-height: 700px;
+            margin-top: 30px;
+        }
+
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 700px;
+        }
+
+        .button-subtext {
+            font-size: 0.9rem;
+            color: #e0e7ff;
+            margin-top: 16px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .benefit-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .benefit-description {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .urgency-bar {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .urgency-text {
+            color: #fca5a5;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .trust-indicators {
+                gap: 20px;
+            }
+
+            .trust-number {
+                font-size: 1.8rem;
+            }
+
+            .booking-title {
+                font-size: 1.8rem;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .calendly-inline-widget {
+                height: 800px;
+            }
+
+            .calendly-container {
+                min-height: 800px;
+            }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: -50px;
+            animation-delay: 5s;
+        }
+
+        .circle-3 {
+            width: 250px;
+            height: 250px;
+            bottom: 10%;
+            left: 30%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-50px) scale(1.1);
+            }
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            margin: 30px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: inline-block;
+            font-size: 1.1rem;
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .video-cta-button {
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .video-cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .video-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(239, 68, 68, 0.5);
+        }
+
+        .video-cta-button:active {
+            transform: translateY(-1px);
+        }
+    </style>
+    <!-- Calendly widget styles -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="badge">🔥 LIMITED SPOTS AVAILABLE</div>
+            <h1>Launch Your Amazon Business in 2025</h1>
+            <p class="subtitle">
+                Discover the proven framework that's helping entrepreneurs build successful Amazon brands from scratch—without guesswork or overwhelm
+            </p>
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="trust-number">100+</span>
+                    <span class="trust-label">Students Trained</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">50+</span>
+                    <span class="trust-label">Success Stories</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">4.9/5</span>
+                    <span class="trust-label">Average Rating</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="video-section">
+            <div class="video-label">🎓 FREE MASTERCLASS: Watch Now</div>
+            <div class="video-container">
+                <!-- Replace YOUR_VIDEO_ID with your actual YouTube video ID -->
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth', block: 'center'})" class="video-cta-button">
+                    🎯 Yes! I Want My Free Strategy Call
+                </button>
+                <p style="color: #94a3b8; margin-top: 12px; font-size: 0.95rem;">Click to book your personalized consultation below ↓</p>
+            </div>
+        </section>
+
+        <div class="scroll-indicator">
+            <span>👇 Book Your Free Strategy Call Below 👇</span>
+        </div>
+
+        <section class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3 class="benefit-title">Clear Strategy</h3>
+                <p class="benefit-description">
+                    Get a step-by-step blueprint that removes confusion and helps you move forward with confidence from day one.
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3 class="benefit-title">Fast Implementation</h3>
+                <p class="benefit-description">
+                    Launch your products faster with proven systems that cut through complexity and get you to market quickly.
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💡</div>
+                <h3 class="benefit-title">Expert Guidance</h3>
+                <p class="benefit-description">
+                    Access insider knowledge from experienced Amazon sellers who've navigated every challenge you'll face.
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3 class="benefit-title">Scalable Growth</h3>
+                <p class="benefit-description">
+                    Build a business designed to scale, with systems that grow with you from your first sale to six figures and beyond.
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🛡️</div>
+                <h3 class="benefit-title">Risk Mitigation</h3>
+                <p class="benefit-description">
+                    Avoid costly mistakes with proven frameworks that protect your investment and maximize your chances of success.
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3 class="benefit-title">Ongoing Support</h3>
+                <p class="benefit-description">
+                    Join a community of like-minded entrepreneurs and get continuous support as you build your Amazon empire.
+                </p>
+            </div>
+        </section>
+
+        <div class="urgency-bar">
+            <p class="urgency-text">⏰ Our consultation calendar fills up quickly—secure your spot today</p>
+        </div>
+
+        <section class="booking-section" id="booking">
+            <div class="booking-content">
+                <h2 class="booking-title">Book Your Free Strategy Call</h2>
+                <p class="booking-description">
+                    Schedule a 1-on-1 strategy call with our Amazon experts. We'll analyze your situation and create a personalized roadmap for your success.
+                </p>
+                <p class="button-subtext">✓ No obligations • 100% Free • Select your preferred time below</p>
+                
+                <!-- Calendly inline widget -->
+                <div class="calendly-container">
+                    <div class="calendly-inline-widget" 
+                         data-url="https://calendly.com/mohamedriyaz7878/new-meeting/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=0f172a&primary_color=f59e0b">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; padding: 60px 0 100px;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Your Amazon Journey Starts Here</h2>
+            <p style="color: #94a3b8; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Join thousands of successful Amazon sellers who started exactly where you are today. Book your call now and take the first step toward building your business.
+            </p>
+        </section>
+    </div>
+
+    <!-- Calendly widget script -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>
